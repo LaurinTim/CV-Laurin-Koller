@@ -1,6 +1,8 @@
 Forty Seconds CV
 ================
 
+There are different files for different types of CVs, for example swiss/internation or german/english. The Forty Seconds CV template was generally used but some design changes were made. Mainly the font used was changed to Nunito Sans.
+
 ## Description
 
 Just another CV class for LaTeX - but this time highly customizable!
