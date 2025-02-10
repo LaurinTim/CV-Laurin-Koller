@@ -1,0 +1,259 @@
+% FortySecondsCV LaTeX template
+% Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
+% Licensed under the 3-Clause BSD License. See LICENSE file for details.
+%
+% Please visit https://github.com/PandaScience/FortySecondsCV for the most
+% recent version! For bugs or feature requests, please open a new issue on
+% github.
+%
+% Contributors
+% ------------
+% * ifokkema
+% * Bertbk
+% * Hespe
+%
+% Attributions
+% ------------
+% * fortysecondscv is based on the twentysecondcv class by Carmine Spagnuolo
+%   (cspagnuolo@unisa.it), released under the MIT license and available under
+%   https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% * further attributions are indicated immediately before corresponding code
+
+%-------------------------------------------------------------------------------
+%                             ADDITIONAL PACKAGES
+%-------------------------------------------------------------------------------
+\documentclass[
+	a4paper,
+	% showframes,
+	% vline=2.2em,
+	maincolor=darkestblue,
+	% sidecolor=gray!50,
+	sectioncolor=darkblue,
+	% subsectioncolor=orange,
+	% itemtextcolor=black!80,
+	% sidebarwidth=0.4\paperwidth,
+	% topbottommargin=0.03\paperheight,
+	% leftrightmargin=20pt,
+	% profilepicsize=4.5cm,
+	profilepicborderwidth=2.5pt,
+	% profilepicstyle=profilecircle,
+	profilepiczoom=1.1,
+	% profilepicxshift=0mm,
+	profilepicyshift=-13mm,
+	profilepicrounding=0.5cm,
+]{fortysecondscv}
+
+% improve word spacing and hyphenation
+\usepackage[final]{microtype}
+\usepackage{ragged2e}
+
+% uncomment in case you don't want any hyphenation
+% \usepackage[none]{hyphenat}
+
+% take care of proper font encoding
+%\ifxetexorluatex
+%	\usepackage{fontspec}
+%	\defaultfontfeatures{Ligatures=TeX}
+%	\newfontfamily\headingfont[Path = fonts/]{NunitoSans-Italic.ttf} % local font
+%\else
+%	\usepackage[utf8]{inputenc}
+%	\usepackage[T1]{fontenc}
+%%	\usepackage[sfdefault]{noto} % use noto google font
+%\fi
+
+% enable mathematical syntax for some symbols like \varnothing
+\usepackage{amssymb}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+% make section titles underlined
+%\titleformat{\section}{\large\bfseries}{\thesection}{1em}{\hrule}
+
+%-------------------------------------------------------------------------------
+%                            PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+%% mandatory information
+% your name
+\cvname{Laurin Tim Koller}
+% job title/career
+\cvjobtitle{MSc Physik, ETH Zurich}
+
+%% optional information
+% profile picture
+\cvprofilepic{pics/profile.png}
+
+% NOTE: ordering in sidebar will mimic the following order
+% short address/location, use \newline if more than 1 line is required
+\cvaddress{Bärengasse 3, 6317 Oberwil b. Zug}
+% phone number
+\cvphone{+41 079 587 16 59}
+% linkedin profile
+%\cvlinkedin{http://www.linkedin.com/in/laurin-koller}{www.linkedin.com/in/laurin-koller}
+% github profile link
+%\cvgithub{https://github.com/LaurinTim}{github.com/LaurinTim}
+% email address
+\cvmail{laurin.koller@protonmail.com}
+% pgp key
+%\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
+% date of birth
+\cvbirthday{February 1, 2000}
+% any other custom entry
+% nationality
+\cvcustomdata{\faPassport}{Schweiz}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 1st PAGE
+%-------------------------------------------------------------------------------
+% add more profile sections to sidebar on first page
+\addtofrontsidebar{
+    % include gosquare national flags from https://github.com/gosquared/flags;
+    % naming according to ISO 3166-1 alpha-2 country codes
+    \graphicspath{{pics/flags/}}
+
+    \profilesection{Soziales Netzwerk}
+        \begin{icontable}{2.0em}{1em}
+            \social{\faLinkedin}
+                {http://www.linkedin.com/in/laurin-koller}
+                {linkedin.com/in/laurin-koller}
+            \vspace{0.1cm}
+            \social{\faGithub}
+				{https://github.com/LaurinTim}
+				{github.com/LaurinTim}
+        \end{icontable}
+    
+    \profilesection{Sprachen}
+        \pointskill{\hspace{0.8cm} Deutsch}{}{5}
+        \pointskill{\hspace{0.8cm} Englisch}{}{5}
+        \pointskill{\hspace{0.8cm} Französisch}{}{3}
+    
+    \profilesection{Hard Skills}
+            %\barskill{\faDesktop}{Computer skills}{100}
+        \barskill{\faPython}{Python}{100}
+                \skill[1.0em]{\faAngleRight}{NumPy}
+                \skill[1.0em]{\faAngleRight}{Pandas}
+                \skill[1.0em]{\faAngleRight}{PyTorch}
+                \skill[1.0em]{\faAngleRight}{PySpark}
+        \barskill{\faDatabase}{SQL}{80}
+        \barskill{\faKeyboard}{MS office}{80}
+        \barskill{\faDesktop}{Künstliche Intelligenz}{70}
+            \skill[1.0em]{\faAngleRight}{Maschinelles lernen}
+            \skill[1.0em]{\faAngleRight}{Natural language processing}
+        \barskill{\faCode}{C++}{50}
+}
+
+%-------------------------------------------------------------------------------
+%                              SIDEBAR 2nd PAGE
+%-------------------------------------------------------------------------------
+\addtobacksidebar{
+    \profilesection{Soft Skills}
+        \barskill{\faUserCog}{Probleme Lösen}{100}
+        \skill{\faFlask}{Forschung}
+        \skill{\faExclamation}{Kritisches Denken}
+        \barskill{\faComments}{Kommunikation}{80}
+        \barskill{\faUsers}{Kollaboration}{80}
+
+    \profilesection{Hobbies}
+        \skill[0em]{\faPlaneDeparture}{Reisen}
+        \skill[0em]{\faCookieBite}{Kochen und Backen}
+        \skill[0em]{\faHiking}{Wandern}
+        \skill[0em]{\faGamepad}{Videospiele}
+        \skill[0em]{\faComment}{Japanisch lernen}
+        \skill[0em]{\faMusic}{Klavier spielen}
+}
+
+%-------------------------------------------------------------------------------
+%                         TABLE ENTRIES RIGHT COLUMN
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makefrontsidebar
+
+\vspace*{-10pt}
+
+\cvsection{Über mich} \vspace{0.2cm}
+\begin{cvtable}
+    \cvitem{}{}{}{
+        \textpoint{\faAngleRight}{Unabhängig, eigenständig und kritisches Denken.}
+        \textpoint{\faAngleRight}{Ich lerne gerne neues und wende es auf realitätsbezogene Situationen an.}
+        \textpoint{\faAngleRight}{Analytisches, strukturiert und guter Umgang mit Zahlen sowie Daten.}
+        \textpoint{\faAngleRight}{Mehrere Jahre Erfahrung mit programmieren - hauptsächlich Python aber auch SQL und C++.}
+        \textpoint{\faAngleRight}{Vier Jahre Erfahrung in der Arbeit mit Datensätzen in Python.}
+        \textpoint{\faAngleRight}{Solide Kenntnisse der Grundlagen des maschinellen Lernens und der Verarbeitung natürlicher Sprache sowie ein Jahr Erfahrung in der Arbeit mit maschinellen Lernmodellen.}
+        \textpoint{\faAngleRight}{Dank meiner Flexibilität und Kommunikationsfähigkeit arbeite ich gut in Teams.}
+    }
+\end{cvtable}
+
+\vspace{0.5cm}
+
+\cvsection{Ausbildung} \vspace{-0.3cm}
+\begin{cvtable}[3]
+    %\vspace{-0.2cm}
+    \cvitem{March 2024 -- October 2024}{Masterarbeit Forscher beim GBAR Experiment (CERN),}{Genf}{
+        \textpoint{\faAngleRight}{Selbstständige Entwicklung und Implementierung von Routinen für die Datenintegration mehrerer Teilsysteme des GBAR-Experiments.} 
+        \textpoint{\faAngleRight}{Erfolgreich trainierte ML Modelle, um einzelne Partikel- und Photoneneinschläge aus ihrer abgelagerten Ladung auf einem Phosphorschirm zu extrahieren.} 
+        \textpoint{\faAngleRight}{Bestimmung der Produktionsrate von Antiwasserstoff beim GBAR-Experiment und erfolgreicher Nachweis, dass diese Menge mindestens viermal höher ist als in früheren Analysen berechnet.} 
+        \textpoint{\faAngleRight}{Analyse und Aufzeichnung experimenteller Daten zur Lamb-Verschiebung in Wasserstoff und erster Nachweis von Lyman-Alpha-Photonen mit dem Aufbau des GBAR-Experiments und einem ionisierten Wasserstoffstrahl.}
+    }
+    \vspace{-0.1cm}
+    \cvitem{2022 -- 2024}{MSc Physik,}{ETH Zurich}{
+        \textpoint{\faAngleRight}{Wahlfächer in Teilchenphysik, Astrophysik, Quantenfeldtheorie und Makroökonomie.}
+        \textpoint{\faAngleRight}{Proseminar in theoretischer Physik mit einem Projekt in shape dynamics.}
+    }
+    \vspace{-0.1cm}
+    \cvitem{2019 -- 2023}{BSc Physik,}{ETH Zurich}{
+        \textpoint{\faAngleRight}{Wahlfächer in Teilchenphysik, Quantenmechanik, klassischer Mechanik und Geschichte.}
+        \textpoint{\faAngleRight}{Führte u. a. Experimente zu Fraktalclustern, Kohlenstoffdatieren und Simulationen von Virenübertragung durch.}
+    }
+    \vspace{-0.1cm}
+    \cvitem{Januar 2019 -- Mai 2019}{Nuklearer Labortechniker beim Schweizer Militär,}{Spiez}{
+        \textpoint{\faAngleRight}{Durchführung von Alpha- und Betastrahlungsmessungen an Lebensmittelproben, um deren Unbedenklichkeit für den Verzehr zu prüfen.}
+        \textpoint{\faAngleRight}{Messung von Gammastrahlungsproben zur Bestimmung ihrer Zusammensetzung an radioaktiven Isotopen.}
+    }
+    \vspace{-0.1cm}
+    \cvitem{2012 -- 2018}{Matura,}{Kantonsschule Zug}{
+        \textpoint{\faAngleRight}{Matura mit den Schwerpunkten Mathematik, Physik und Informatik.}
+        \textpoint{\faAngleRight}{Abschlussprojekt zur Messung der atomaren Struktur verschiedener Stare anhand ihres Spektrums an sichtbarem Licht.}
+        %\textpoint{\faAngleRight}{}
+    }
+\end{cvtable}
+
+%-------------------------------------------------------------------------------
+%                              TABLE ENTRIES 2nd PAGE
+%-------------------------------------------------------------------------------
+
+\newpage
+\makebacksidebar
+
+\vspace*{-10pt}
+
+\cvsection{Studiumsbegleitende Arbeit} \vspace{-0.3cm}
+\begin{cvtable}[3]
+    \cvitem{Juli 2018 -- August 2018}{Studenten Job bei Coop,}{Baar}{
+        \textpoint{\faAngleRight}{Arbeitete als Kassierer bei Coop.}
+    }
+    \vspace{-0.1cm}
+    \cvitem{Juli 2016 -- August 2016}{Studenten Job bei V-Zug,}{Zug}{
+        \textpoint{\faAngleRight}{Durchführung von Qualitätskontrollen an Maschinenteilen.}
+        \textpoint{\faAngleRight}{Entgegennahme und Weiterleitung neuer Lieferungen an das Lager.}
+    }
+    \cvitem{Juli 2015 -- August 2015}{Hausmeister in der Grundschule Baar,}{Baar}{}
+\end{cvtable}
+
+\end{document}
