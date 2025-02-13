@@ -1,4 +1,4 @@
-% FortySecondsCV LaTeX class
+ % FortySecondsCV LaTeX class
 % Copyright © 2019-2020 René Wirnata <rene.wirnata@pandascience.net>
 % Licensed under the 3-Clause BSD License. See LICENSE file for details.
 %
@@ -157,7 +157,7 @@
 \RequirePackage{fontspec}
 \setmainfont[Path= fonts/,
     BoldFont = NunitoSans-Bold.ttf,
-    ItalicFont = NunitoSans-Italic.ttf]
+    ItalicFont = NunitoSans-SemiBold.ttf]
 {NunitoSans-Regular.ttf}
 
 \setsansfont[Path= fonts/,
@@ -465,14 +465,15 @@
 	\par
 }
 
-\newcommand{\barskillright}[3]{
+\newcommand{\barskillright}[4][0em]{
+        \hspace{#1}
 	% remove 1pt in width to prevent overfull box warnings
 	\begin{tikzpicture}[x=\sidebartextwidth-1pt, y=2ex]
-                \node[above right] at (0, 1) {\cvicon{#1} ~ #2};
+                \node[above right] at (0, 1) {\cvicon{#2} ~ #3};
 			\draw[fill, skillbg, rounded corners=0.5em]
 				(0.4, 1.3) rectangle (1, 2.3);
 			\draw[fill, iconcolor!75, rounded corners=0.5em]
-				(0.4, 1.3) rectangle (#3/100*0.6+0.4, 2.3);
+				(0.4, 1.3) rectangle (#4/100*0.6+0.4, 2.3);
 	\end{tikzpicture}
 	\par
 }
@@ -480,7 +481,7 @@
 % \skill[<indent>]{<icon>}{<description>} creates in sidebar
 % | [indent] [icon]  some longer skill description  |
 \newcommand{\skill}[3][0em]{
-	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{#3} \hfill \par
+	\hspace{#1} \cvicon{#2} ~ \parbox{\linewidth-#1-2.5em}{\raggedright#3} \hfill \par
 }
 
 % label for wheel charts
@@ -691,8 +692,8 @@
 	& \parbox[t]{0.81\textwidth}{#2} \\}
 
 \newcommand{\textpoint}[2]{%
-        \parbox[t]{0.02\textwidth}{\raggedright \footnotesize #1}
-        \parbox[t]{0.93\textwidth}{\raggedright #2 \vspace{0.2cm}}
+        \parbox[t]{0.04\textwidth}{\centering \footnotesize #1}
+        \parbox[t]{0.94\textwidth}{\raggedright #2 \vspace{0.2cm}}
         }
 
 % | <date>         <bold-title>  \hfill  <location>  |
@@ -702,8 +703,8 @@
 
 \newcommand{\cvitem}[4]{%
         \vspace{-0.1cm}%
-        \parbox[t]{0.05\textwidth}{\raggedright} &
-	\parbox[t]{0.95\textwidth}{%
+        \parbox[t]{0.02\textwidth}{\raggedright} &
+	\parbox[t]{0.98\textwidth}{%
             \if\relax\detokenize{#1}\relax%
                 \textcolor{itemtextcolor}{#4}%
             \else%

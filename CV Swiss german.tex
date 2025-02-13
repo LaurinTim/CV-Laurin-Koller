@@ -113,10 +113,11 @@
 % pgp key
 %\cvkey{4096R/FF00FF00}{0xAABBCCDDFF00FF00}
 % date of birth
-\cvbirthday{February 1, 2000}
+\cvbirthday{1. Februar, 2000}
 % any other custom entry
 % nationality
 \cvcustomdata{\faPassport}{Schweiz}
+\cvcustomdata{\faUserFriends}{Ledig, keine Kinder}
 
 %-------------------------------------------------------------------------------
 %                              SIDEBAR 1st PAGE
@@ -141,7 +142,7 @@
     \profilesection{Sprachen}
         \pointskill{\hspace{0.8cm} Deutsch}{}{5}
         \pointskill{\hspace{0.8cm} Englisch}{}{5}
-        \pointskill{\hspace{0.8cm} Französisch}{}{3}
+        \pointskill{\hspace{1.4cm} Französisch}{}{3}
     
     \profilesection{Hard Skills}
             %\barskill{\faDesktop}{Computer skills}{100}
@@ -149,11 +150,12 @@
                 \skill[1.0em]{\faAngleRight}{NumPy}
                 \skill[1.0em]{\faAngleRight}{Pandas}
                 \skill[1.0em]{\faAngleRight}{PyTorch}
-                \skill[1.0em]{\faAngleRight}{PySpark}
+                %\skill[1.0em]{\faAngleRight}{PySpark}
         \barskill{\faDatabase}{SQL}{80}
         \barskill{\faKeyboard}{MS office}{80}
         \barskill{\faDesktop}{Künstliche Intelligenz}{70}
             \skill[1.0em]{\faAngleRight}{Maschinelles lernen}
+            \skill[1.0em]{\faAngleRight}{Deep learning}
             \skill[1.0em]{\faAngleRight}{Natural language processing}
         \barskill{\faCode}{C++}{50}
 }
@@ -163,11 +165,17 @@
 %-------------------------------------------------------------------------------
 \addtobacksidebar{
     \profilesection{Soft Skills}
-        \barskill{\faUserCog}{Probleme Lösen}{100}
-        \skill{\faFlask}{Forschung}
-        \skill{\faExclamation}{Kritisches Denken}
-        \barskill{\faComments}{Kommunikation}{80}
-        \barskill{\faUsers}{Kollaboration}{80}
+        \skill[0.0em]{\faUsers}{\textit{Zusammenarbeit}}
+            \skill[0.8em]{\faAngleRight}{Arbeiten in agilen Teams}
+            \skill[0.8em]{\faAngleRight}{Funktionsübergreifende Zusammenarbeit}
+        \skill[0.0em]{\faUserCog}{\textit{Problemlösung}}
+            \skill[0.8em]{\faAngleRight}{Entwerfen von ML-Modellen}
+            \skill[0.8em]{\faAngleRight}{Optimierung von Daten-Workflowss}
+        \skill[0.0em]{\faComments}{\textit{Kommunikation}}
+            \skill[0.8em]{\faAngleRight}{Verfassen technischer Berichte}
+            \skill[0.8em]{\faAngleRight}{Präsentation neuer Erkenntnisse vor interdisziplinären Teams}
+        \skill[0.0em]{\faFlask}{\textit{Forschung}}
+
 
     \profilesection{Hobbies}
         \skill[0em]{\faPlaneDeparture}{Reisen}
@@ -185,51 +193,54 @@
 
 \makefrontsidebar
 
-\vspace*{-10pt}
+%\vspace*{-10pt}
 
-\cvsection{Über mich} \vspace{0.2cm}
+\cvsection{Über mich} \vspace{-0.1cm}
 \begin{cvtable}
     \cvitem{}{}{}{
-        \textpoint{\faAngleRight}{Unabhängig, eigenständig und kritisches Denken.}
-        \textpoint{\faAngleRight}{Ich lerne gerne neues und wende es auf realitätsbezogene Situationen an.}
-        \textpoint{\faAngleRight}{Analytisches, strukturiert und guter Umgang mit Zahlen sowie Daten.}
-        \textpoint{\faAngleRight}{Mehrere Jahre Erfahrung mit programmieren - hauptsächlich Python aber auch SQL und C++.}
+        \textpoint{\faAngleRight}{Leidenschaft für Problemlösungen, Datenanalyse und maschinelles Lernen und deren Anwendung auf reale Herausforderungen.}
+        \textpoint{\faAngleRight}{Analytisch, strukturiert und gut im Umgang mit Zahlen und Daten.}
+        \textpoint{\faAngleRight}{Über fünf Jahre Erfahrung mit Programmierung - hauptsächlich Python, aber auch SQL und C++.}
+        \textpoint{\faAngleRight}{Über fünf Jahre Erfahrung mit programmieren - hauptsächlich Python aber auch SQL und C++.}
         \textpoint{\faAngleRight}{Vier Jahre Erfahrung in der Arbeit mit Datensätzen in Python.}
-        \textpoint{\faAngleRight}{Solide Kenntnisse der Grundlagen des maschinellen Lernens und der Verarbeitung natürlicher Sprache sowie ein Jahr Erfahrung in der Arbeit mit maschinellen Lernmodellen.}
-        \textpoint{\faAngleRight}{Dank meiner Flexibilität und Kommunikationsfähigkeit arbeite ich gut in Teams.}
+        \textpoint{\faAngleRight}{Praktische Erfahrung mit maschinellem Lernen und Deep Learning sowie Erfahrung in der Implementierung von Modellen.}
+        \textpoint{\faAngleRight}{Kenntnisse der Grundlagen der Verarbeitung natürlicher Sprache und generativer KI.}
+        \textpoint{\faAngleRight}{Effektiver Teamplayer mit starken Kommunikationsfähigkeiten und Anpassungsfähigkeit in kollaborativen Umgebungen.}
     }
 \end{cvtable}
 
-\vspace{0.5cm}
-
-\cvsection{Ausbildung} \vspace{-0.3cm}
-\begin{cvtable}[3]
-    %\vspace{-0.2cm}
+\cvsection{Forschungserfahrung} \vspace{-0.6cm}
+\begin{cvtable} [3]
     \cvitem{March 2024 -- October 2024}{Masterarbeit Forscher beim GBAR Experiment (CERN),}{Genf}{
-        \textpoint{\faAngleRight}{Selbstständige Entwicklung und Implementierung von Routinen für die Datenintegration mehrerer Teilsysteme des GBAR-Experiments.} 
-        \textpoint{\faAngleRight}{Erfolgreich trainierte ML Modelle, um einzelne Partikel- und Photoneneinschläge aus ihrer abgelagerten Ladung auf einem Phosphorschirm zu extrahieren.} 
-        \textpoint{\faAngleRight}{Bestimmung der Produktionsrate von Antiwasserstoff beim GBAR-Experiment und erfolgreicher Nachweis, dass diese Menge mindestens viermal höher ist als in früheren Analysen berechnet.} 
-        \textpoint{\faAngleRight}{Analyse und Aufzeichnung experimenteller Daten zur Lamb-Verschiebung in Wasserstoff und erster Nachweis von Lyman-Alpha-Photonen mit dem Aufbau des GBAR-Experiments und einem ionisierten Wasserstoffstrahl.}
+        \textpoint{\faAngleRight}{Entwicklung und Implementierung von Datenintegrationspipelines unter Verwendung von pandas und der Apache Spark-Architektur des CERN.} 
+        \textpoint{\faAngleRight}{Trainierte und optimierte maschinelle Lernmodelle zur Klassifizierung von Einzelteilchen- und Photoneneinschlägen auf der Grundlage von Energiedepositionsmustern.} 
+        \textpoint{\faAngleRight}{Analysierte die Produktionsraten von Antiwasserstoff am GBAR-Experiment und erzielte eine vierfache Verbesserung gegenüber früheren Studien.}
+        \textpoint{\faAngleRight}{Verwendete statistische Modellierung, Signalverarbeitung und Big-Data-Techniken an, um Forschungsabläufe zu optimieren.}
+        \textpoint{\faAngleRight}{Entdeckung des ersten Nachweises von Lyman-Alpha Photonen unter Verwendung des GBAR-Setups mit einem ionisierten Wasserstoffstrahl, was zu präzisen Antimaterie-Messungen beiträgt.}
     }
-    \vspace{-0.1cm}
+\end{cvtable}
+
+\cvsection{Ausbildung} \vspace{-0.6cm}
+\begin{cvtable}[3]
+    \vspace{-0.5cm}
     \cvitem{2022 -- 2024}{MSc Physik,}{ETH Zurich}{
         \textpoint{\faAngleRight}{Wahlfächer in Teilchenphysik, Astrophysik, Quantenfeldtheorie und Makroökonomie.}
         \textpoint{\faAngleRight}{Proseminar in theoretischer Physik mit einem Projekt in shape dynamics.}
     }
-    \vspace{-0.1cm}
+    \vspace{-0.5cm}
     \cvitem{2019 -- 2023}{BSc Physik,}{ETH Zurich}{
         \textpoint{\faAngleRight}{Wahlfächer in Teilchenphysik, Quantenmechanik, klassischer Mechanik und Geschichte.}
         \textpoint{\faAngleRight}{Führte u. a. Experimente zu Fraktalclustern, Kohlenstoffdatieren und Simulationen von Virenübertragung durch.}
     }
-    \vspace{-0.1cm}
-    \cvitem{Januar 2019 -- Mai 2019}{Nuklearer Labortechniker beim Schweizer Militär,}{Spiez}{
+    \vspace{-0.5cm}
+    \cvitem{Januar 2019 -- Mai 2019}{Training als Nuklearer Labortechniker, Schweizer Militär,}{Spiez}{
         \textpoint{\faAngleRight}{Durchführung von Alpha- und Betastrahlungsmessungen an Lebensmittelproben, um deren Unbedenklichkeit für den Verzehr zu prüfen.}
         \textpoint{\faAngleRight}{Messung von Gammastrahlungsproben zur Bestimmung ihrer Zusammensetzung an radioaktiven Isotopen.}
     }
-    \vspace{-0.1cm}
+    \vspace{-0.5cm}
     \cvitem{2012 -- 2018}{Matura,}{Kantonsschule Zug}{
         \textpoint{\faAngleRight}{Matura mit den Schwerpunkten Mathematik, Physik und Informatik.}
-        \textpoint{\faAngleRight}{Abschlussprojekt zur Messung der atomaren Struktur verschiedener Stare anhand ihres Spektrums an sichtbarem Licht.}
+        \textpoint{\faAngleRight}{Abschlussprojekt zur Messung der atomaren Struktur verschiedener Sternen anhand ihres Spektrums im sichtbarem Licht.}
         %\textpoint{\faAngleRight}{}
     }
 \end{cvtable}
@@ -243,12 +254,13 @@
 
 \vspace*{-10pt}
 
-\cvsection{Studiumsbegleitende Arbeit} \vspace{-0.3cm}
+\cvsection{Ausbildungsbegleitende Arbeit} \vspace{-0.6cm}
 \begin{cvtable}[3]
+    \vspace{-0.5cm}
     \cvitem{Juli 2018 -- August 2018}{Studenten Job bei Coop,}{Baar}{
         \textpoint{\faAngleRight}{Arbeitete als Kassierer bei Coop.}
     }
-    \vspace{-0.1cm}
+    \vspace{-0.5cm}
     \cvitem{Juli 2016 -- August 2016}{Studenten Job bei V-Zug,}{Zug}{
         \textpoint{\faAngleRight}{Durchführung von Qualitätskontrollen an Maschinenteilen.}
         \textpoint{\faAngleRight}{Entgegennahme und Weiterleitung neuer Lieferungen an das Lager.}
@@ -257,3 +269,10 @@
 \end{cvtable}
 
 \end{document}
+
+\vspace{-0.5cm}
+    \cvitem{2012 -- 2018}{Matura,}{Kantonsschule Zug}{
+        \textpoint{\faAngleRight}{Matura mit den Schwerpunkten Mathematik, Physik und Informatik.}
+        \textpoint{\faAngleRight}{Abschlussprojekt zur Messung der atomaren Struktur verschiedener Sternen anhand ihres Spektrums im sichtbarem Licht.}
+        %\textpoint{\faAngleRight}{}
+    }
